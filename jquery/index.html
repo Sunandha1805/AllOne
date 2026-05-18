@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIT College Mobile Website</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+    href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HOME PAGE -->
+    <div data-role="page" id="home">
+
+        <!-- Header -->
+        <div data-role="header" data-theme="b">
+            <h1>AIT College</h1>
+        </div>
+
+        <!-- Content -->
+        <div data-role="content">
+
+            <h2>Welcome to AIT Pune</h2>
+
+            <p>
+                Army Institute of Technology is a premier engineering college
+                offering quality education and modern facilities.
+            </p>
+
+            <ul data-role="listview" data-inset="true">
+
+                <li>
+                    <a href="#about">About College</a>
+                </li>
+
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Footer -->
+        <div data-role="footer" data-theme="b">
+            <h4>© 2026 AIT Pune</h4>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ABOUT PAGE -->
+    <div data-role="page" id="about">
+
+        <div data-role="header" data-theme="b">
+            <h1>About College</h1>
+        </div>
+
+        <div data-role="content">
+
+            <h3>About AIT</h3>
+
+            <p>
+                AIT Pune provides engineering education in various branches
+                with excellent placements and campus facilities.
+            </p>
+
+            <h3>Facilities</h3>
+
+            <ul data-role="listview" data-inset="true">
+                <li>Library</li>
+                <li>Computer Labs</li>
+                <li>Sports Ground</li>
+                <li>Hostel Facility</li>
+            </ul>
+
+            <a href="#home" data-role="button">Back to Home</a>
+
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h4>About Page</h4>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- COURSES PAGE -->
+    <div data-role="page" id="courses">
+
+        <div data-role="header" data-theme="b">
+            <h1>Courses</h1>
+        </div>
+
+        <div data-role="content">
+
+            <h3>Available Courses</h3>
+
+            <ul data-role="listview" data-inset="true">
+
+                <li>Information Technology</li>
+                <li>Computer Engineering</li>
+                <li>Electronics & Telecom</li>
+                <li>Mechanical Engineering</li>
+
+            </ul>
+
+            <a href="#home" data-role="button">Back to Home</a>
+
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h4>Courses Page</h4>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- CONTACT PAGE -->
+    <div data-role="page" id="contact">
+
+        <div data-role="header" data-theme="b">
+            <h1>Contact Us</h1>
+        </div>
+
+        <div data-role="content">
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <label for="message">Message:</label>
+                <textarea id="message"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+
+            <h3>College Address</h3>
+
+            <p>
+                Army Institute of Technology,<br>
+                Pune, Maharashtra
+            </p>
+
+            <a href="#home" data-role="button">Back to Home</a>
+
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h4>Contact Page</h4>
+        </div>
+
+    </div>
+
+</body>
+</html>
