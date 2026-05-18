@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Admin Dashboard</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button class="toggle-btn" id="toggleBtn">☰</button>
+          <h2>College Admin</h2>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" class="active" onclick="switchTab('dashboard')"
+              ><i>📊</i><span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="switchTab('students')"
+              ><span>Students</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><span>Faculty</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Courses</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Admissions</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Reports</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Settings</span></a>
+          </li>
+        </ul>
+      </aside>
+      <main class="main-content">
+        <header class="header">
+          <h1>Dashboard Overview</h1>
+          <div class="user-info">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACUCAMAAABGFyDbAAAAY1BMVEX///9NTU9GRkiGhodJSUs+PkA8PD9CQkTNzc03Nzo0NDaKiouenp86Ojz7+/vh4eFhYWNaWlxVVVfW1tb19fXv7+8qKi24uLmSkpNra2ynp6h8fH3p6el2dneurq9wcHHExMTPOIOlAAAENklEQVR4nO2bi5KiMBBFDSQEohgE5CGu5v+/ckG0HGbUJB06zNZyvuBWurmdx2WzWVlZWVlZ+RfZF/Wp2YbhtjnVxX5pNTdKecoSxnlwg3MmspMslxZ1aRmjZAJlrL0sKUzuEv5N010ZT3ZyKVUXEr3SNBKRyyKiJOHvRQ1wssCCnYKX5ZuUMjh5FlWGH+r3pZKh39ZvmYkqQljrUdTxqmmrJ/x69CarNVbV6/K2XlvDCt7ruPWj6mKlqtflxcBkZaeKkMqDf5VXrV99h17xbeJiZFhTIvQy7hN7VYQk2JuwnYU3POE7XFXnA0QVIYczqqw6hclKa1RZufVnOEJzTFVna896UGFW8WRp8E8Y5tarA9awr2KHp+qcQVURkuFVsQjgsoICTZYCWfxIotBkwTu+n4t4Pd+AJs8Ib9BkdS69hfcp/nGR9ed/k/VLi7h1aXm8A9DOwSAQhyJ0tzWAuOMqXGThDR+Zw2XleIdFwBnxAepZsQE7RIA3ezabWEBliRhR1ga+l8dUtWmAzsUwawjfnyLuTW+EIF1BiKtqU4C6q0JerH4XARjXHPE0dkdCVsvDdWBt7V0C917kjs3194CnK/BjZjUZaebpwcDurtnHPfNIbGFeFHUYTikqwzpSfMea6MqNFizIvarq+54YDG1G/D2P3dnvUk0habpbIhOh8uiDMBrlagFRA5c2eSOMJu0yD/s3jjURP5/SaSBI7b2rphRNS7+ENChPaNt4/v5ecpR1c0iqG8mhqeXCCzVlX5a/I4y0srLyeyjPMp4gz0sm8PayqJuMC5Ek0YQkEYJnTV1I/z4WN10epa+TgeMQSqO8azzumDdn1QkWGGxPKWeiU7iP+g+K7UFYHDECcdiiT+6joqk+FPhtzYKUKtTxXWfQHESGduAv1Y9ArsWSMaZQfEO2Do8FtxVr5z9fl+Gn84This2e91SZwyvUE5apGUXtd8J5qUaomO/seLwCEm7viNqZvCI2u28wJchnmUix7lBvC01n0AWJKOpwjzDW4FeeT1SOnn9ytNB3pE4v1zhrNVApuCrlEDDQwcG6JPhR0wQBnJDyMLMzTKEHmK4MsYQDPIOocomImMEAkWLMdn8AaHv4RtQcymxVueTtzLFN5sVeVPW67Kb2vHuZ9wRWEWyXRJQdNvkpy4dMJyweQW3/5HHBYu/lkBG2JzFV5a+zBky7q2z9dVYPbc3OtLHHzhpgZt7lksWFYJbf3aNtlN9RmRy0MU5gnzHyCPhvIFBMfh9xyZZCMcikKq+mNZIqrSyXlDcUg3S4Z3cYCXSqSu/2MFDpjD72OqYfJDqjh/2t6Yr2b09YrtQVXS7VIXrugi62fva4Xf4qS/M/3hIeP6Dx+WKRju97/vPb3jL+oHUIlz8QnWSpj7L8ni6eaM4ZtQgWQRN7jrtwETqfEYCVlZWVlZVX/AVYZka320NE/QAAAABJRU5ErkJggg=="
+              alt="User Avatar"
+            />
+            <span>Admin User</span>
+          </div>
+        </header>
+        <div class="content container-fluid py-4" id="dashboard-tab">
+          <!-- Stats Grid -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h3 class="card-title mb-0">2,847</h3>
+                  <p class="card-text text-muted">Total Students</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h3 class="card-title mb-0">156</h3>
+                  <p class="card-text text-muted">Faculty Members</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h3 class="card-title mb-0">89</h3>
+                  <p class="card-text text-muted">Active Courses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Grid -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="card shadow-sm border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Enrollment Trends</h5>
+                  <div class="text-center mt-3">
+                    <img src="enrollment.png" class="img-fluid rounded" alt="Enrollment chart" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card shadow-sm border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Department Performance</h5>
+                  <div class="text-center mt-3">
+                    <img src="department_performance.png" class="img-fluid rounded" alt="Department performance chart" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0 pt-4 pb-0">
+              <h5 class="card-title mb-0">Recent Activity</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center border-0 mb-2">
+                  <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px; font-weight: bold;">JD</div>
+                  <div>
+                    <p class="mb-0">John Doe enrolled in Computer Science</p>
+                    <small class="text-muted">2 hours ago</small>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0 mb-2">
+                  <div class="bg-success text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px; font-weight: bold;">SM</div>
+                  <div>
+                    <p class="mb-0">Sarah Miller submitted assignment</p>
+                    <small class="text-muted">4 hours ago</small>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0 mb-2">
+                  <div class="bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px; font-weight: bold;">RK</div>
+                  <div>
+                    <p class="mb-0">Dr. Robert King updated course syllabus</p>
+                    <small class="text-muted">6 hours ago</small>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <div class="bg-info text-dark rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px; font-weight: bold;">AL</div>
+                  <div>
+                    <p class="mb-0">Alice Johnson graduated</p>
+                    <small class="text-muted">1 day ago</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content" id="students-tab" style="display: none; padding: 20px">
+          <h2>Students Directory</h2>
+          <div class="card mt-4 shadow-sm">
+            <div class="card-body">
+              <table class="table table-hover align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CS-2023-01</td>
+                    <td>John Doe</td>
+                    <td>Computer Science</td>
+                    <td>
+                      <span class="badge bg-success rounded-pill">Enrolled</span>
+                    </td>
+                    <td>
+                      <button class="btn btn-primary btn-sm">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MA-2023-14</td>
+                    <td>Sarah Miller</td>
+                    <td>Mathematics</td>
+                    <td>
+                      <span class="badge bg-success rounded-pill">Enrolled</span>
+                    </td>
+                    <td>
+                      <button class="btn btn-primary btn-sm">View</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("collapsed");
+      });
+
+      // Mobile sidebar toggle
+      if (window.innerWidth <= 768) {
+        toggleBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
+        });
+      }
+
+      function switchTab(tabId) {
+        document.getElementById("dashboard-tab").style.display =
+          tabId === "dashboard" ? "block" : "none";
+        document.getElementById("students-tab").style.display =
+          tabId === "students" ? "block" : "none";
+
+        // Update active class on sidebar links
+        const links = document.querySelectorAll(".sidebar-menu a");
+        links.forEach((link) => link.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
