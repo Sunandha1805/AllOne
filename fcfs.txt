@@ -1,0 +1,30 @@
+package org.cloudbus.cloudsim.examples;
+
+import java.util.*;
+
+public class fcfs {
+
+    public static void main(String[] args) {
+
+        int bt[] = {10, 5, 8, 12};
+        int wt[] = new int[bt.length];
+        int tat[] = new int[bt.length];
+
+        wt[0] = 0;
+
+        for(int i = 1; i < bt.length; i++) {
+            wt[i] = wt[i-1] + bt[i-1];
+        }
+
+        for(int i = 0; i < bt.length; i++) {
+            tat[i] = wt[i] + bt[i];
+        }
+
+        System.out.println("FCFS Scheduling");
+        System.out.println("Process\tBurst Time\tWaiting Time\tTurnaround Time");
+
+        for(int i = 0; i < bt.length; i++) {
+            System.out.println("P" + (i+1) + "\t\t" + bt[i] + "\t\t" + wt[i] + "\t\t" + tat[i]);
+        }
+    }
+}
