@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student CRUD App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .student {
+            background: #eee;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student CRUD App</h1>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <input type="text" id="course" placeholder="Enter Course">
+
+        <button onclick="addStudent()">Add Student</button>
+
+        <div id="studentList"></div>
+
+    </div>
+
+    <script>
+
+const API = "http://localhost:3000/students";
+
+
+// SHOW ALL STUDENTS
+async function loadStudents() {
+
+    let response = await fetch(API);
+
+    let students = await response.json();
+
+    let output = "";
+
+    students.forEach((s) => {
+
+        output += `
+        <div class="student">
+            <h3>${s.name}</h3>
+            <p>Age: ${s.age}</p>
+            <p>Course: ${s.course}</p>
+
+            <button onclick="deleteStudent('${s._id}')">
+                Delete
+            </button>
+        </div>
+        `;
+    });
+
+    document.getElementById("studentList").innerHTML = output;
+}
+
+
+// ADD STUDENT
+async function addStudent() {
+
+    let name = document.getElementById("name").value;
+
+    let age = document.getElementById("age").value;
+
+    let course = document.getElementById("course").value;
+
+    await fetch(API, {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name: name,
+            age: age,
+            course: course
+        })
+    });
+
+    loadStudents();
+}
+
+
+// DELETE STUDENT
+async function deleteStudent(id) {
+
+    await fetch(API + "/" + id, {
+
+        method: "DELETE"
+    });
+
+    loadStudents();
+}
+
+
+loadStudents();
+
+    </script>
+
+</body>
+
+</html>
