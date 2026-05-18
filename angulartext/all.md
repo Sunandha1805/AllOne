@@ -370,3 +370,20 @@ Open browser:
 ```text id="t2m7vx"
 http://localhost:4200
 ```
+
+
+
+
+
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes),
+    importProvidersFrom(FormsModule)
+  ]
+};
